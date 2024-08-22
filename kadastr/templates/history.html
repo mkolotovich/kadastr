@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>номер</th>
+                <th>широта</th>
+                <th>долгота</th>
+                <th>ответ</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for id, number, latitudes, longitude, answer in result %}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{number}}</td>
+                <td>{{latitudes}}</td>
+                <td>{{longitude}}</td>
+                <td>{{answer}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
